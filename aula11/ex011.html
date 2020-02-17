@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pais</title>
+</head>
+<body>
+    <h1>Sistema de paises</h1>
+    De qual pais voce eh: <input typo="string" name="txtpais" id="txtpais">
+    <input type="button" value="OK" onclick="qualpais()">
+    <div id="res">
+
+    </div>
+    <script>
+        function qualpais() {
+            var pais = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
+            var p = txtpais.value
+
+            res.innerHTML = `<p>Seu pais eh <strong>${p}</strong>!</p>`
+            if (p == 'brasil') {
+                res.innerHTML += `<p>Voce e Brasileiro</p>`
+            } else {
+                res.innerHTML += `<p>Voce e Estrangeiro</p>`
+            }
+            
+        }
+    </script>
+</body>
+</html>
